@@ -50,7 +50,6 @@ public class AplicacaoCompras {
                     sair = true;
                 } else if (flag == 1) {
                     contador++;
-                    sair = false;
                 } else {
                     System.out.println("Tecla errada.");
                 }
