@@ -5,6 +5,7 @@ import com.br.compras.controller.Produto;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class AplicacaoCompras {
@@ -26,7 +27,7 @@ public class AplicacaoCompras {
 
             Produto[] p = new Produto[20];
 
-            System.out.println("Digite a descrição da compra: ");
+            System.out.println("Digite a descrição da compra " + contador + " : ");
             String descProduto = scan.next();
 
             p[contador] = new Produto();
@@ -63,7 +64,8 @@ public class AplicacaoCompras {
 
     private static void extratoConta(ArrayList<Produto> carrinhoDeCompras, double saldoConta) {
         System.out.println("COMPRAS REALIZADAS:");
-        Collections.sort(carrinhoDeCompras);
+        //Collections.sort(carrinhoDeCompras);
+        carrinhoDeCompras.sort(Comparator.comparing(Produto::getValor));
         for (Produto compra : carrinhoDeCompras) {
             System.out.println(compra);
         }
