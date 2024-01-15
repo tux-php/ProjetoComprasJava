@@ -53,11 +53,13 @@ public class AplicacaoCompras {
     }
 
     private static void extratoConta(CartaoCredito cc) {
+        System.out.println("***********************");
         System.out.println("COMPRAS REALIZADAS:");
         cc.getCompras().sort(Comparator.comparing(Produto::getValor));
         for (Produto compras: cc.getCompras()) {
             System.out.println(compras);
         }
+        System.out.println("***********************");
         System.out.println("Saldo do cartão: " + cc.getSaldo());
     }
 }
