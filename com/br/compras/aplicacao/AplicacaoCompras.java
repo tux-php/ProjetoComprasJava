@@ -3,6 +3,7 @@ package com.br.compras.aplicacao;
 import com.br.compras.controller.CartaoCredito;
 import com.br.compras.controller.Produto;
 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
 
@@ -11,7 +12,7 @@ public class AplicacaoCompras {
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite o limite do cartão: ");
         double limite = scan.nextDouble();
-        CartaoCredito cc = new CartaoCredito("2825-8", "7.281-X", limite);
+        CartaoCredito cc = new CartaoCredito("8888-8", "9.999-X", limite);
 
         double totalDeCompras = 0;
         int contador = 1;
@@ -55,7 +56,8 @@ public class AplicacaoCompras {
     private static void extratoConta(CartaoCredito cc) {
         System.out.println("***********************");
         System.out.println("COMPRAS REALIZADAS:");
-        cc.getCompras().sort(Comparator.comparing(Produto::getValor));
+        //cc.getCompras().sort(Comparator.comparing(Produto::getValor));
+        Collections.sort(cc.getCompras());
         for (Produto compras: cc.getCompras()) {
             System.out.println(compras);
         }
