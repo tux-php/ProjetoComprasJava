@@ -11,7 +11,6 @@ public class CartaoCredito extends Cartao{
         return saldo;
     }
 
-    private String bandeira;
 
     private List<Produto> compras;
 
@@ -25,9 +24,6 @@ public class CartaoCredito extends Cartao{
         this.saldo = limite;
         this.compras = new ArrayList<>();
 
-    }
-    public String getBandeira() {
-        return bandeira;
     }
 
 
