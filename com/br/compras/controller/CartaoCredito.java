@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CartaoCredito extends Cartao {
-    private double limite;
+    private final double limite;
     private double saldo;
-    private List<Produto> compras;
+    private final List<Produto> compras;
     public CartaoCredito(String agencia, String conta, double limite) {
         super(agencia, conta);
         this.limite = limite;
@@ -20,11 +20,6 @@ public class CartaoCredito extends Cartao {
 
     public List<Produto> getCompras() {
         return compras;
-    }
-
-
-    public double getLimite() {
-        return limite;
     }
 
     public boolean lancaCompra(Produto compra) {
