@@ -31,8 +31,7 @@ public class AplicacaoCompras {
             p[contador] = new Produto(descProduto, vl);
             totalDeCompras += p[contador].getValor();
 
-            if (cc.getLimite() >= totalDeCompras) {
-                cc.lancaCompra(p[contador]);
+            if (cc.lancaCompra(p[contador])) {                ;
                 System.out.println("Compra realizada!");
                 System.out.println("Digite 0 para sair ou 1 para continuar");
                 int flag = scan.nextInt();
