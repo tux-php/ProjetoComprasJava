@@ -4,7 +4,6 @@ import com.br.compras.controller.CartaoCredito;
 import com.br.compras.controller.Produto;
 
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class AplicacaoCompras {
